@@ -1,0 +1,25 @@
+P2P chat server:
+
+user_info has 5 friends with following details – { fname(string),info { ip(string), (port(int)) } }
+
+friend's names are (case sensitive) : 'Satyam', 'Kunal', 'Abhishek', 'Gautam', 'Hemanth'
+
+
+USAGE:
+
+1.	run make file like this way:
+	-> make
+
+2.	run a server like this way:
+	-> ./select XXXX
+
+	[note: XXXX is friendname(case sensitive) whose server you want to run on this terminal]
+
+3.	similarly run server for other friends
+
+4.	if you want to send message from server of Satyam to server of Kunal then type this in Satyam's server:
+	-> Kunal/Hello Bhai, Wapas kab aa rha hai ?
+
+5.	Server will automatically connect and send message, similarly chat with other peers also
+
+6.	timeout is set to 60 seconds so if a server does not get any select activity in 60 seconds then it will be reset and any other message transfer with this server will happen after re-connecting it
